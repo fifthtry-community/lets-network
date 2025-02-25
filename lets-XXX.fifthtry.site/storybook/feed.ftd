@@ -1,0 +1,27 @@
+-- import: lets-XXX.fifthtry.site/storybook/self
+
+-- lets-XXX.feed-page:
+updates-url: /storybook/self/
+items: $items
+
+-- lets-XXX.feed-item list items:
+
+-- lets-XXX.feed-item: $self.updates.0
+from: $rg
+
+-- lets-XXX.feed-item: $self.updates.1
+from: $me
+
+-- lets-XXX.feed-item: $self.updates.2
+from: $rg
+
+-- end: items
+
+-- lets-XXX.contact rg: Rahul Gupta
+url: /storybook/rg/
+domain: rahulg.com
+
+
+-- lets-XXX.contact me: Amit Upadhyay
+url: /storybook/self/
+domain: amitu.com

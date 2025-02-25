@@ -1,0 +1,85 @@
+-- import: fastn/processors as pr
+
+-- boolean feed-enabled: $lets-auth.is-personal-site
+
+-- import: lets-XXX.fifthtry.site/ui/self as _
+export: self-page, show-update
+
+-- import: lets-XXX.fifthtry.site/ui/feed as _
+export: feed-page
+
+-- import: lets-XXX.fifthtry.site/ui/page as _
+export: update-page
+
+
+-- integer from: 0
+$processor$: pr.request-data
+
+-- string site-name: $ds.site-name
+
+
+;; when someone goes to their /updates/ page, they see their feed. if someone
+;; else goes to your /updates/ page, they see your updates.
+
+;; if the site is marked as an "org site" or non personal site of any kind,
+;; then again there is nothing in feed, and everyone just sees the updates from
+;; this site.
+
+
+;; in future we will use enums to handle different kinds of updates, for now
+;; every update has a text, timestamp, embedded images, optional video,
+
+;; these are self updates
+-- record update:
+;; every update has a unique url
+string permalink:
+;; some updates will have title, to be shown more prominently
+optional caption title:
+;; this is the body of the update, can include markdown syntax
+optional body text:
+;; if you are linking to something
+optional lets-XXX.link link:
+;; in case of image the title/sub-title/body provides enough information for alt text
+optional lets-XXX.link image:
+optional lets-XXX.video video:
+string list tags:
+integer likes: 0
+integer comments: 0
+string created-on:
+
+
+
+
+;; for links we are trying to follow social media preview card format
+-- record link:
+string url: ;; e.g., https://fifthtry.com/blog/lets-talk/
+string title: ;; e.g., Launching Let's Talk
+optional string sub-title: ;; e.g., FifthTry Blog
+optional string thumbnail: ;; e.g., https://fifthtry.com/blog/lets-talk/thumbnail.jpg
+optional string body: ;; e.g., Talk to people on the domain you own
+
+
+
+
+
+-- record video:
+lets-XXX.link link:
+;; we will add all supported video platforms here
+optional string youtube-id:
+
+
+
+;; should this record be here or in a separate contacts package?
+;; we are going to create `lets-contact`, which is a "lower level" package
+;; compared to this one, meaning lets-XXX imports lets-contact.
+-- record contact:
+caption name:
+string url: ;; e.g., https://amitu.com/ranedk.com
+string domain:
+optional string profile-picture:
+
+
+;; these are updates from others
+-- record feed-item:
+caption lets-XXX.update update:
+lets-XXX.contact from:

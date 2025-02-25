@@ -1,0 +1,95 @@
+-- component self-page:
+lets-XXX.update list updates:
+boolean viewer-is-owner: false
+string updates-url: $ftd.app-url(path=/)
+string feed-url: $ftd.app-url(path=/feed/)
+optional string search:
+;; if user has searched something, clicking on this clears the search
+optional string clear-search-url:
+;; if there are more results to show, next and previous page urls are provided
+optional string next-page-url:
+optional string previous-page-url:
+
+-- lets-XXX.update-page:
+feed-page-is-open: false
+viewer-is-owner: $self-page.viewer-is-owner
+feed-url: $self-page.feed-url
+updates-url: $self-page.updates-url
+
+-- compose-form:
+if: { self-page.viewer-is-owner }
+
+-- lets-XXX.show-update: $update
+for: update in $self-page.updates
+
+-- end: lets-XXX.update-page
+
+-- end: self-page
+
+
+-- component show-update:
+caption lets-XXX.update update:
+optional lets-XXX.contact from:
+
+-- ds.section-column:
+
+    -- ftd.column:
+    border-width.px: 2
+    border-radius.px: 8
+    border-color: $ds.colors.border
+    width: fill-container
+    padding.px: 24
+    spacing.fixed.px: 10
+
+        -- ds.heading-small: $show-update.update.title
+        if: { show-update.update.title != NULL }
+
+        -- ds.copy-regular:
+        if: { show-update.update.text != NULL }
+
+        $show-update.update.text
+
+        -- show-from: $show-update.from
+        if: { show-update.from != NULL }
+
+    -- end: ftd.column
+
+-- end: ds.section-column
+
+-- end: show-update
+
+
+-- component show-from:
+caption lets-XXX.contact from:
+
+-- ftd.row:
+border-width.px: 2
+border-radius.px: 8
+border-color: $ds.colors.border
+width: hug-content
+align-self: end
+padding.px: 24
+spacing.fixed.px: 10
+link: $show-from.from.url
+
+    -- ds.heading-tiny: $show-from.from.name
+
+    -- ds.copy-regular: $show-from.from.domain
+
+-- end: ftd.row
+
+-- end: show-from
+
+
+-- component compose-form:
+
+-- ds.section-row:
+
+-- ds.text-area:
+placeholder: What's on your mind?
+
+-- ds.primary-button: Submit
+
+-- end: ds.section-row
+
+-- end: compose-form

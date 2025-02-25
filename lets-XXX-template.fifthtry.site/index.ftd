@@ -1,0 +1,8 @@
+-- ds.site-page: My site
+
+-- ds.heading-large: My Site
+
+-- ds.heading-medium: My Updates
+link: $ftd.app-url(path=/, app=lets-XXX)
+
+-- end: ds.site-page
