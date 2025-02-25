@@ -1,14 +1,12 @@
--- ds.site-page: lets-network - A social updates app for your or your companies site
+-- ds.site-page: lets-network - all your contacts, in one place, on your site
 
--- ds.heading-large: `lets-network`: A social updates app for your or your companies site
+-- ds.heading-large: `lets-network`: all your contacts, in one place, on your site
 
 Package: `lets-network.fifthtry.site`
 
-[Design Docs](/design/)
-
 Template: `lets-network-template.fifthtry.site` (TODO: create site button here)
 
--- ds.heading-medium: Adding Lets Update App To Your Existing `fastn` Site
+-- ds.heading-medium: Adding Lets Network App To Your Existing `fastn` Site
 
 You will have to use the `lets-auth.fifthtry.site` and
 `lets-network.fifthtry.site` packages.
@@ -34,20 +32,20 @@ mount-point: /-/auth/
 package: lets-auth.fifthtry.site
 
 
-\-- fastn.app: Lets Update App
-mount-point: /updates/
+\-- fastn.app: Lets Network App
+mount-point: /contacts/
 package: lets-network.fifthtry.site
 
 -- ds.copy-regular:
 
-Note that we are "mounting" the `lets-network.fifthtry.site` package at `/updates/`
+Note that we are "mounting" the `lets-network.fifthtry.site` package at `/contacts/`
 URL. [Learn more about `fastn.app` feature in `fastn` here](https://fastn.com/app/).
 
 
 -- ds.heading-medium: Open Source
 
-This project is licensed under [BSD-3 license][1]. You can find our source code
-on [fifthtry-community/lets-network][2] on Github.
+This project is licensed under [MIT][1]. You can find our source code on
+[fifthtry-community/lets-network][2] on Github.
 
 [1]: https://github.com/fifthtry-community/lets-network/blob/main/LICENSE
 [2]: https://github.com/fifthtry-community/lets-network
