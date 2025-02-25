@@ -1,20 +1,7 @@
-# app template
+# `lets-network` - all your contacts, in one place, on your site.
 
-This repository should be used to create all apps in the fifthtry marketplace 
-ecosystem.
-
-## Instructions For People Using Template
-
-- On FifthTry create the three sites and make them non-editable.
-- Create tokens for each of them and add them to Github secrets, follow the 
-  names in `.github/yml` files.
-- Mark `lets-network.fifthtry.site` as a package on FifthTry.
-- Remove everything till this line from README.
-
-
-# `lets-network` - A XXX for sites
-
-You can use this fastn app to XXX.
+You can use this fastn app to manage your contacts or personal network. This is
+your addressbook on your website.
 
 ## Developer Setup
 
