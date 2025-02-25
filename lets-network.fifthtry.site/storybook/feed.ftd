@@ -1,0 +1,27 @@
+-- import: lets-network.fifthtry.site/storybook/self
+
+-- lets-network.feed-page:
+updates-url: /storybook/self/
+items: $items
+
+-- lets-network.feed-item list items:
+
+-- lets-network.feed-item: $self.updates.0
+from: $rg
+
+-- lets-network.feed-item: $self.updates.1
+from: $me
+
+-- lets-network.feed-item: $self.updates.2
+from: $rg
+
+-- end: items
+
+-- lets-network.contact rg: Rahul Gupta
+url: /storybook/rg/
+domain: rahulg.com
+
+
+-- lets-network.contact me: Amit Upadhyay
+url: /storybook/self/
+domain: amitu.com

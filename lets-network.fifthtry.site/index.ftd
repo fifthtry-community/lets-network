@@ -2,13 +2,13 @@
 
 -- boolean feed-enabled: $lets-auth.is-personal-site
 
--- import: lets-XXX.fifthtry.site/ui/self as _
+-- import: lets-network.fifthtry.site/ui/self as _
 export: self-page, show-update
 
--- import: lets-XXX.fifthtry.site/ui/feed as _
+-- import: lets-network.fifthtry.site/ui/feed as _
 export: feed-page
 
--- import: lets-XXX.fifthtry.site/ui/page as _
+-- import: lets-network.fifthtry.site/ui/page as _
 export: update-page
 
 
@@ -38,10 +38,10 @@ optional caption title:
 ;; this is the body of the update, can include markdown syntax
 optional body text:
 ;; if you are linking to something
-optional lets-XXX.link link:
+optional lets-network.link link:
 ;; in case of image the title/sub-title/body provides enough information for alt text
-optional lets-XXX.link image:
-optional lets-XXX.video video:
+optional lets-network.link image:
+optional lets-network.video video:
 string list tags:
 integer likes: 0
 integer comments: 0
@@ -63,7 +63,7 @@ optional string body: ;; e.g., Talk to people on the domain you own
 
 
 -- record video:
-lets-XXX.link link:
+lets-network.link link:
 ;; we will add all supported video platforms here
 optional string youtube-id:
 
@@ -71,7 +71,7 @@ optional string youtube-id:
 
 ;; should this record be here or in a separate contacts package?
 ;; we are going to create `lets-contact`, which is a "lower level" package
-;; compared to this one, meaning lets-XXX imports lets-contact.
+;; compared to this one, meaning lets-network imports lets-contact.
 -- record contact:
 caption name:
 string url: ;; e.g., https://amitu.com/ranedk.com
@@ -81,5 +81,5 @@ optional string profile-picture:
 
 ;; these are updates from others
 -- record feed-item:
-caption lets-XXX.update update:
-lets-XXX.contact from:
+caption lets-network.update update:
+lets-network.contact from:

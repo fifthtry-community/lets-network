@@ -1,5 +1,5 @@
 -- component self-page:
-lets-XXX.update list updates:
+lets-network.update list updates:
 boolean viewer-is-owner: false
 string updates-url: $ftd.app-url(path=/)
 string feed-url: $ftd.app-url(path=/feed/)
@@ -10,7 +10,7 @@ optional string clear-search-url:
 optional string next-page-url:
 optional string previous-page-url:
 
--- lets-XXX.update-page:
+-- lets-network.update-page:
 feed-page-is-open: false
 viewer-is-owner: $self-page.viewer-is-owner
 feed-url: $self-page.feed-url
@@ -19,17 +19,17 @@ updates-url: $self-page.updates-url
 -- compose-form:
 if: { self-page.viewer-is-owner }
 
--- lets-XXX.show-update: $update
+-- lets-network.show-update: $update
 for: update in $self-page.updates
 
--- end: lets-XXX.update-page
+-- end: lets-network.update-page
 
 -- end: self-page
 
 
 -- component show-update:
-caption lets-XXX.update update:
-optional lets-XXX.contact from:
+caption lets-network.update update:
+optional lets-network.contact from:
 
 -- ds.section-column:
 
@@ -60,7 +60,7 @@ optional lets-XXX.contact from:
 
 
 -- component show-from:
-caption lets-XXX.contact from:
+caption lets-network.contact from:
 
 -- ftd.row:
 border-width.px: 2

@@ -29,15 +29,15 @@ function build-wasm() {
 
 
 function update-ui() {
-  pushd2 "${PROJ_ROOT}/lets-XXX.fifthtry.site" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network.fifthtry.site" || return 1
   $FASTN update
   popd2
 }
 
 function run-ui() {
-  pushd2 "${PROJ_ROOT}/lets-XXX.fifthtry.site" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network.fifthtry.site" || return 1
 
-  echo "Using $FASTN to serve lets-XXX.fifthtry.site/"
+  echo "Using $FASTN to serve lets-network.fifthtry.site/"
 
   $FASTN --trace serve --port 8002 --offline || echo "fastn failed, ensure its installed, and also consider running update-ui"
 
@@ -45,15 +45,15 @@ function run-ui() {
 }
 
 function update-www() {
-  pushd2 "${PROJ_ROOT}/lets-XXX.fifthtry-community.com" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network.fifthtry-community.com" || return 1
   $FASTN update
   popd2
 }
 
 function run-www() {
-  pushd2 "${PROJ_ROOT}/lets-XXX.fifthtry-community.com" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network.fifthtry-community.com" || return 1
 
-  echo "Using $FASTN to serve lets-XXX.fifthtry-community.com/"
+  echo "Using $FASTN to serve lets-network.fifthtry-community.com/"
 
   $FASTN --trace serve --port 8003 --offline || echo "fastn failed, ensure its installed, and also consider running update-ui"
 
@@ -61,7 +61,7 @@ function run-www() {
 }
 
 function update-template() {
-  pushd2 "${PROJ_ROOT}/lets-XXX-template.fifthtry.site" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network-template.fifthtry.site" || return 1
   $FASTN update
   popd2
 }
@@ -77,7 +77,7 @@ function build-wasm() {
 
 
 function run-template() {
-  pushd2 "${PROJ_ROOT}/lets-XXX-template.fifthtry.site" || return 1
+  pushd2 "${PROJ_ROOT}/lets-network-template.fifthtry.site" || return 1
 
   build-wasm || return 1
   $FASTN --trace serve --offline

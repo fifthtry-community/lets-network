@@ -11,7 +11,7 @@ SOURCE1="./target/wasm32-unknown-unknown/release/"
 SOURCE2="$HOME/target/wasm32-unknown-unknown/release/"
 
 # Define destination folders
-DEST="./lets-XXX.fifthtry.site"
+DEST="./lets-network.fifthtry.site"
 
 # Ensure WASM files exist and determine the source folder to use
 if [ -d "$SOURCE1" ]; then

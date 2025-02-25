@@ -1,4 +1,4 @@
--- lets-XXX.self-page:
+-- lets-network.self-page:
 viewer-is-owner: true
 feed-url: /storybook/feed/
 updates: $updates
@@ -7,9 +7,9 @@ updates: $updates
 
 
 
--- lets-XXX.update list updates:
+-- lets-network.update list updates:
 
--- lets-XXX.update: Some thought on `cdp_feed`
+-- lets-network.update: Some thought on `cdp_feed`
 permalink: /
 created-on: 21st Jan 2025
 
@@ -19,11 +19,11 @@ so the `cdp_update` table should be used.
 
 
 
--- lets-XXX.update: Update with only title
+-- lets-network.update: Update with only title
 permalink: /
 created-on: 21st Jan 2025
 
--- lets-XXX.update:
+-- lets-network.update:
 permalink: /
 created-on: 21st Jan 2025
 

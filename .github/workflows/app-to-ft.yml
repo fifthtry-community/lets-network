@@ -1,10 +1,10 @@
-name: Upload lets-XXX to FifthTry
+name: Upload lets-network to FifthTry
 
 on:
   push:
     branches: [ main ]
     paths:
-      - lets-XXX.fifthtry.site/**
+      - lets-network.fifthtry.site/**
       - backend/**
       - scripts/*.sh
       - .github/workflows/app-to-ft.yml
@@ -14,7 +14,7 @@ jobs:
   upload-to-fifthtry:
     runs-on: ubuntu-latest
     env:
-      FIFTHTRY_SITE_WRITE_TOKEN: ${{ secrets.FT_LETS_XXX }}
+      FIFTHTRY_SITE_WRITE_TOKEN: ${{ secrets.FT_LETS_NETWORK }}
     steps:
       - uses: actions/checkout@v2
       - uses: Swatinem/rust-cache@v2

@@ -1,7 +1,7 @@
 -- import: fastn
 
--- fastn.package: lets-XXX.fifthtry.site
-system: lets-XXX
+-- fastn.package: lets-network.fifthtry.site
+system: lets-network
 system-is-confidential: false
 
 -- fastn.dependency: design-system.fifthtry.site
@@ -13,13 +13,13 @@ system-is-confidential: false
 ;; this is a system: alias must be lets-auth
 -- fastn.auto-import: lets-auth.fifthtry.site as lets-auth
 
-;; this is a system: alias must be lets-XXX
--- fastn.auto-import: lets-XXX.fifthtry.site as lets-XXX
+;; this is a system: alias must be lets-network
+-- fastn.auto-import: lets-network.fifthtry.site as lets-network
 
 
 -- fastn.migration: 0001-initial-migration
 
-;; https://lets-XXX.fifthtry-community.com/design/schema/
+;; https://lets-network.fifthtry-community.com/design/schema/
 
 CREATE TABLE cdp_feed (
     id INTEGER PRIMARY KEY,

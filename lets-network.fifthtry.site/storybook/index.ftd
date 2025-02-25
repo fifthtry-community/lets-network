@@ -5,7 +5,7 @@
 -- import: fastn/processors as pr
 ;; this is needed so we can pass this module to `ds.storybook`.
 ;;           storybook navigate module
--- import: lets-XXX.fifthtry.site/storybook
+-- import: lets-network.fifthtry.site/storybook
 
 -- import: design-system.fifthtry.site/actions/navigate
 export: active-file-content, active-title, active-sub-title, submit

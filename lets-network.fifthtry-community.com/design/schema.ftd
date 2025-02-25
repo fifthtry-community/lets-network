@@ -1,4 +1,4 @@
--- string title: `lets-XXX`: Database Schema
+-- string title: `lets-network`: Database Schema
 
 -- ds.site-page: $title
 
@@ -12,7 +12,7 @@ so the `cdp_update` table should be used.
 
 -- ds.heading-medium: Note on `domain`
 
-We are going to use the word domain in context of `lets-XXX` app. A domain is
+We are going to use the word domain in context of `lets-network` app. A domain is
 either a domain, e.g., `amitu.com`, or sub domain, e.g., `amitu.fifthtry.site`.
 We will be using the word `domain` to mean either, or even `sub-sub-domain` etc.
 
