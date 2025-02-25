@@ -2,5 +2,5 @@
 #[ft_sdk::processor]
 pub fn hello_world(
 ) -> ft_sdk::processor::Result {
-    ft_sdk::processor::json(serde_json::json!({"hello" => "there"}))
+    ft_sdk::processor::json(serde_json::json!({"hello": "there"}))
 }
