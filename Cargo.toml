@@ -12,7 +12,12 @@ authors = [
     "Amit Upadhyay <upadhyay@gmail.com>",
     "Siddhant Kumar <siddhant@fifthtry.com>",
 ]
-edition = "2021"
+edition = "2024"
+description = "lets-network - sdk for lets-network app"
+license = "MIT"
+repository = "https://github.com/fifthtry-community/lets-network"
+homepage = "https://github.com/fifthtry-community/lets-network"
+
 
 [workspace.dependencies]
 ft-sdk = { version = "0.3.1", features = ["sqlite-default", "auth-provider", "field-extractors"] }
