@@ -328,6 +328,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "lets-network"
+version = "0.1.0"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.170"
 source = "registry+https://github.com/rust-lang/crates.io-index"

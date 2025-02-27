@@ -3,7 +3,7 @@
 ;; this page itself uses other pluggable components like update-header, so if you
 ;; want to just modify the header, you do not have to overwrite this page, just
 ;; the auth-header component, and this page will use your modified update-header.
--- component update-page:
+-- component network-page:
 boolean viewer-is-owner:
 boolean feed-page-is-open: false
 children content:
@@ -20,26 +20,26 @@ fastn-badge: true
 
 
         -- heading-tab: My Updates
-        underline if { update-page.viewer-is-owner && !update-page.feed-page-is-open }: true
-        link: $update-page.updates-url
+        underline if { network-page.viewer-is-owner && !network-page.feed-page-is-open }: true
+        link: $network-page.updates-url
 
         -- ds.heading-small: |
-        if: { update-page.viewer-is-owner }
+        if: { network-page.viewer-is-owner }
 
         -- heading-tab: Feed
-        if: { update-page.viewer-is-owner }
-        link: $update-page.feed-url
-        underline: $update-page.feed-page-is-open
+        if: { network-page.viewer-is-owner }
+        link: $network-page.feed-url
+        underline: $network-page.feed-page-is-open
 
 
 	-- end: ds.section-row
 
 	-- ds.section-column:
-	content: $update-page.content
+	content: $network-page.content
 
 -- end: ds.site-page
 
--- end: update-page
+-- end: network-page
 
 
 
