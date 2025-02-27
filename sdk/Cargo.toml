@@ -1,6 +1,6 @@
 [package]
 name = "lets-network"
-version = "0.1.0"
+version = "0.1.1"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -8,5 +8,8 @@ repository.workspace = true
 homepage.workspace = true
 description.workspace = true
 
+[features]
+serde = ["dep:serde"]
+
 [dependencies]
-serde.workspace = true
+serde = { workspace = true, optional = true }

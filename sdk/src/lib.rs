@@ -13,7 +13,8 @@
 // optional string domain: ;; e.g., google.com
 // optional string logo:
 
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Contact {
     pub name: String,
     pub title: Option<String>,
@@ -23,7 +24,8 @@ pub struct Contact {
     pub profile_picture: Option<String>,
 }
 
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Organisation {
     pub name: String,
     pub url: String,
