@@ -23,3 +23,4 @@ homepage = "https://github.com/fifthtry-community/lets-network"
 ft-sdk = { version = "0.5.0", features = ["sqlite-default", "auth-provider", "field-extractors"] }
 serde_json = "1"
 serde = { version = "1", features = ["derive"] }
+http = "1.0"
